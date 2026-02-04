@@ -1,0 +1,31 @@
+.colorss1{
+	color:red;
+}
+
+.colorss2{
+	color:#769bcf;
+}
+
+.colorss3{
+	color:rgb(12, 192, 237)
+}
+
+.bgs1{
+	background:#11ed23;
+	background-position: bottom;
+	background-repeat:no-repeat;
+	background-size: 200px;
+	background-clip:content-box;
+}
+
+.fontss{
+	font-size:50px;
+	font-style:oblique;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	font-variant:small-caps;
+}
+
+.textss{
+	letter-spacing:10px;
+}
