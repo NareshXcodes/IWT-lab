@@ -1,0 +1,440 @@
+<html>
+
+<head>
+    <title>Experiment-9 Task1</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+        :root {
+            --gold-primary: #B8860B;
+            --gold-light: #D4A84B;
+            --gold-dark: #8B6914;
+            --gold-accent: #C9A227;
+            --bg-dark: #0F0E0C;
+            --bg-card: #1A1815;
+            --bg-card-hover: #252119;
+            --text-primary: #F5F0E8;
+            --text-secondary: #A69F94;
+            --text-muted: #6B6560;
+            --border-color: #2A2622;
+            --success: #4A7C59;
+            --danger: #8B3A3A;
+        }
+
+        body {
+            height: 100vh;
+            width: 98vw;
+            /* background:linear-gradient( #000000,#1A1A1A); */
+            background-color: #0F0E0C;
+            color: white;
+            padding: 0 0 10px 10px;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            width: 100%;
+            height: 10%;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 0 10px 10px;
+        }
+
+        .logoFirstPart {
+            padding: 0;
+            color: var(--gold-light);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-style: semi-bold;
+            font-family: serif;
+        }
+
+        .links {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            justify-content: space-between;
+            align-content: center;
+            gap: 20px;
+            color: var(--text-secondary);
+        }
+
+        .links a {
+            text-decoration: none;
+            letter-spacing: 2px;
+            color: var(--text-secondary);
+            font-weight: 700;
+            font-family: "Roboto", sans-serif;
+            font-size: 15px;
+        }
+
+
+        .navButtons {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .btn1 {
+            border-radius: 2px;
+            height: 50px;
+            width: 150px;
+            font-size: 12px;
+            font-weight: bold;
+            background: transparent;
+            border: 1px solid var(--gold-primary);
+            color: var(--gold-light);
+        }
+
+        .btn1:hover {
+            background: var(--gold-primary);
+            color: var(--bg-dark);
+        }
+
+        .btn2 {
+            border-radius: 2px;
+            height: 50px;
+            width: 150px;
+            font-size: 12px;
+            font-weight: bold;
+            color: var(--bg-dark);
+            background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-dark) 100%);
+            border: 1px solid var(--gold-light);
+            transition: all 0.3s ease;
+        }
+
+        .btn2:hover {
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(184, 134, 11, 0.3);
+        }
+
+        .body {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 90%;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+
+        .bodyLeft {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: start;
+            flex-direction: column;
+            padding-left: 50px;
+            box-sizing: border-box;
+        }
+
+        .Market {
+            width: 250px;
+            height: 40px;
+            background-color: var(--bg-card);
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-family: "Roboto", sans-serif;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .bodyGoldColor {
+            color: var(--gold-accent);
+            font-style: italic;
+        }
+
+        .bodyLeftBoard {
+            width: 60%;
+            font-size: 60px;
+            font-weight: 200;
+            font-family: serif;
+        }
+
+        .bodyLeftParagrap {
+            width: 60%;
+            font-family: "Roboto", sans-serif;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .Buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .HorizontalBar {
+            width: 90%;
+            height: 1px;
+            background-color: var(--border-color);
+            margin: 20px;
+        }
+
+        .bodyLeftFooter {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .bodyLeftFooterSec {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .bodyLeftFooterTrend {
+            color: var(--gold-accent);
+            font-family: "Playfair Display", serif;
+            font-size: 30px;
+            margin: 0;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .description {
+            font-family: "Roboto", sans-serif;
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 12px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .bodyRight {
+            width: 40%;
+            height: 90%;
+            background: linear-gradient(60deg, var(--gold-dark), var(--bg-card));
+            background-color: var(--bg-dark);
+            background-image: linear-gradient(to bottom, rgba(197, 160, 89, 0.15) 0%, rgba(15, 15, 15, 0) 25%);
+            color: var(--text-primary);
+            font-family: 'Montserrat', sans-serif;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            box-sizing: border-box;
+        }
+
+        .bodyRightHead {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 10%;
+            align-items: center;
+        }
+
+        .bodyRightDescrip {
+            font-family: "Roboto", serif;
+            font-weight: 600;
+            color: var(--text-secondary);
+            justify-items: start;
+        }
+
+        .bodyRightLiveIndicator {
+            color: rgb(16, 179, 16);
+            font-family: "Roboto", serif;
+            font-weight: 500;
+            justify-items: end;
+        }
+
+        .dollorSign {
+            color: var(--gold-accent);
+        }
+
+        .goldPrice {
+            color: white;
+            font-family: "Playfair Display", serif;
+            font-size: 50px;
+            width: 100%;
+            height: 30%;
+        }
+
+        .priceTrendBadge {
+            color: var(--success);
+            background-color: var(--bg-card-hover);
+            font-family: "Roboto", serif;
+            font-size: 20px;
+            height: 50px;
+            width: 210px;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .oresPriceSection {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 70%;
+        }
+
+        .sections {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-content: center;
+            height: 50%;
+        }
+
+        .ore {
+            background-color: var(--bg-card);
+            height: 80%;
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: space-evenly;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+
+        .oreHead {
+            font-family: "Roboto", serif;
+            font-weight: 600;
+            color: var(--text-secondary);
+            font-size: 12px;
+        }
+
+        .orePrice {
+            font-family: "Playfair Display", serif;
+            font-size: 24px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .oreTrendgreen {
+            color: var(--success);
+            font-weight: 700;
+            font-family: "Roboto", serif;
+            font-size: 14px;
+        }
+
+        .oreTrendRed {
+            color: var(--danger);
+            font-weight: 700;
+            font-family: "Roboto", serif;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <p class="logo"><span class="logoFirstPart">AURUM</span> GOLD</p>
+        <div class="links">
+            <a href="#services">SERVICES</a>
+            <a href="#gold">WHY GOLD</a>
+            <a href="">PRODUCT</a>
+            <a href="">REVIEWS</a>
+            <a href="">CONTACT</a>
+        </div>
+        <div class="navButtons">
+            <button class="btn1">SELL GOLD</button>
+            <button class="btn2">BUY GOLD</button>
+        </div>
+    </nav>
+
+    <div class="body">
+        <div class="bodyLeft">
+            <div class="Market">
+                <span style="color:rgba(0, 255, 0, 0.404);"> ● </span> MARKET OPEN - TRADING LIVE
+            </div>
+            <h1 class="bodyLeftBoard">
+                Invest in
+                <span class="bodyGoldColor">Gold</span>
+                Secure Your
+                Future
+            </h1>
+
+            <p class="bodyLeftParagrap">
+                Experience permium gold trading with competitive rates.
+                secure storage and expert guidance. Join thousands of
+                investors who trust us with their precious metals portfolio.
+            </p>
+
+            <div class="Buttons">
+                <button class="btn2">EXPLORE PRODUCT</button>
+                <button class="btn1">GET FREE CONSULTATION</button>
+            </div>
+
+            <div class="HorizontalBar"></div>
+
+            <div class="bodyLeftFooter">
+                <div class="bodyLeftFooterSec">
+                    <p class="bodyLeftFooterTrend">$2.5B+</p>
+                    <p class="description">ASSETS UNDER MANAGEMENT</p>
+                </div>
+
+                <div class="bodyLeftFooterSec">
+                    <p class="bodyLeftFooterTrend">50k+</p>
+                    <p class="description">SATISFIED CLIENTS</p>
+                </div>
+
+                <div class="bodyLeftFooterSec">
+                    <p class="bodyLeftFooterTrend">15+</p>
+                    <p class="description">YEARS EXPERIENCE</p>
+                </div>
+            </div>
+        </div>
+        <div class="bodyRight">
+            <div class="bodyRightHead">
+                <div class="bodyRightDescrip">
+                    GOLD SPOT PRICE(XA1/USD)
+                </div>
+                <div class="bodyRightLiveIndicator">
+                    ● LIVE
+                </div>
+            </div>
+            <div class="goldPrice">
+                <sup class="dollorSign">$</sup>6,241.50
+                <div class="priceTrendBadge">
+                    ▲ +12.82%(+5684.25)
+                </div>
+            </div>
+            <div class="HorizontalBar"></div>
+            <div class="oresPriceSection">
+                <div class="sections">
+                    <div class="ore">
+                        <P class="oreHead">SILVER(XAQ)</P>
+                        <p class="orePrice">$31.42</p>
+                        <p class="oreTrendgreen">+1.28%</p>
+                    </div>
+                    <div class="ore">
+                        <P class="oreHead">PLATINUM(XPT)</P>
+                        <p class="orePrice">$1,024.80</p>
+                        <p class="oreTrendRed">-0.49%</p>
+                    </div>
+                </div>
+                <div class="sections">
+                    <div class="ore">
+                        <P class="oreHead">PALLADIUM(XPD)</P>
+                        <p class="orePrice">$986.50</p>
+                        <p class="oreTrendgreen">+0.82%</p>
+                    </div>
+                    <div class="ore">
+                        <P class="oreHead">GOLD/SILVER RATIO</P>
+                        <p class="orePrice">$136.40</p>
+                        <p class="oreTrendgreen">+1.05%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
